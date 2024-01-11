@@ -13,16 +13,16 @@ fi
 read -r -p "Install Deps? [y/N] " response
 case "$response" in
 	[yY][eE][sS]|[yY]) 
-		rc = `sudo apt install bc bcc bin86 gawk bridge-utils iproute2 libcurl4 libcurl4-openssl-dev bzip2 kmod fig2dev texinfo texlive-latex-base gcc-multilib texlive-fonts-extra 
-		/ texlive-fonts-recommended libpci-dev mercurial libncurses5-dev patch libvncserver-dev libsdl1.2-dev gettext libaio1 libaio-dev libssl-dev acpica-tools
-		/ libbz2-dev git uuid-dev python-is-python3 python-dev-is-python3 python3-twisted 
-		/ build-essential make gcc libc6-dev zlib1g-dev texlive-latex-recommended libext2fs-dev libyajl-dev libpixman-1-dev liblzma-dev flex bison ninja-build libelf-dev
-		/ libnl-3-dev libnl-route-3-dev
-		/ libsystemd-dev
-		/ iasl libbz2-dev e2fslibs-dev git-core uuid-dev ocaml ocaml-findlib libx11-dev bison flex xz-utils libyajl-dev
-		/ libsdl1.2-dev
-		# For 9pfs support
-		/ libcap-ng-dev libattr1-dev`
+		rc = `sudo apt install bc bcc bin86 gawk bridge-utils iproute2 libcurl4 libcurl4-openssl-dev bzip2 kmod fig2dev texinfo texlive-latex-base gcc-multilib texlive-fonts-extra \
+		 texlive-fonts-recommended libpci-dev mercurial libncurses5-dev patch libvncserver-dev libsdl1.2-dev gettext libaio1 libaio-dev libssl-dev acpica-tools \
+		 libbz2-dev git uuid-dev python-is-python3 python-dev-is-python3 python3-twisted  \
+		 build-essential make gcc libc6-dev zlib1g-dev texlive-latex-recommended libext2fs-dev libyajl-dev libpixman-1-dev liblzma-dev flex bison ninja-build libelf-dev \
+		 libnl-3-dev libnl-route-3-dev \
+		 libsystemd-dev \
+		 iasl libbz2-dev e2fslibs-dev git-core uuid-dev ocaml ocaml-findlib libx11-dev bison flex xz-utils libyajl-dev \
+		 libsdl1.2-dev \
+		 # For 9pfs support
+		 libcap-ng-dev libattr1-dev`
 		if [ $rc -ne 0 ]; then
 			echo "Error installing deps"
 			exit 1
